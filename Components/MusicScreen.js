@@ -21,8 +21,8 @@ import Ripple from 'react-native-material-ripple';
 import AudioPlayer from './AudioPlayer';
 import TimerCountdown from 'react-native-timer-countdown';
 
-var width = Dimensions.get('window').width; //full width
-var height = Dimensions.get('window').height; //full height
+var WIDTH = Dimensions.get('window').width; //full width
+var HEIGHT = Dimensions.get('window').height; //full height
 
 const MAIN_COLOR = '#9dc6d1';
 const MAIN_WHITE = 'rgba(255, 255, 255, 0.8)';
@@ -96,106 +96,9 @@ export default class MusicScreen extends Component {
 					alignItems: 'center',
 					backgroundColor: MAIN_COLOR
 				}}>
-				{/* <TouchableHighlight
-					onPress={() => {
-						this.setModalVisible(true);
-					}}>
-					<Ionicons name="menu" size={35} color="#fff" />
-				</TouchableHighlight> */}
+
 				<AudioPlayer />
 
-				{/* <View style={styles.timer}>
-					<View
-						style={{
-							flexWrap: 'wrap',
-							alignItems: 'flex-start',
-							flexDirection: 'row'
-						}}>
-						<TouchableOpacity onPress={this.timeReducer}>
-							<Ionicons name="minus-circle" size={35} color="#fff" />
-						</TouchableOpacity>
-						<Text style={styles.textTimer}>Timer</Text>
-						<TouchableOpacity onPress={this.timePicker}>
-							<Ionicons name="plus-circle" size={35} color="#fff" />
-						</TouchableOpacity>
-					</View>
-					<TouchableHighlight
-						underlayColor="rgba(255, 255, 255, 0)"
-						onPress={this.startTimer}>
-						<Text style={styles.start}>Start</Text>
-					</TouchableHighlight>
-
-					{this.state.pressed && this.state.timer !== 0 ? (
-						<TimerCountdown
-							initialSecondsRemaining={this.state.count}
-							onTick={this.tickTime.bind(this)}
-							onTimeElapsed={() => {
-								this.timeElapsed = 0;
-								this.setState({ count: 0, timeElapsed: 0 });
-							}}
-							allowFontScaling={true}
-							style={{ fontSize: 20, color: MAIN_WHITE, marginTop: 20 }}
-						/>
-					) : (
-						<Text style={{ fontSize: 20, marginTop: 20, color: MAIN_WHITE }}>
-							{this.state.timer}
-						</Text>
-					)}
-				</View>
-
-				<View style={{ marginTop: 22 }}>
-					<Modal
-						animationType="fade"
-						transparent={false}
-						visible={this.state.modalVisible}
-						onRequestClose={() => {
-							alert('Modal has been closed.');
-						}}>
-						<View style={(styles.container, { marginTop: 22 })}>
-							<View style={{ backgroundColor: MAIN_COLOR }} />
-						</View>
-						<View style={styles.container}>
-							<ScrollView
-								style={{
-									flex: 1,
-									width: width / 1.1,
-									backgroundColor: MAIN_COLOR,
-									borderColor: 'rgba(255, 255, 255, 0.5)',
-									borderWidth: 2,
-									margin: 2
-								}}>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-								<Text style={styles.playlist}>Hello</Text>
-							</ScrollView>
-
-							<TouchableHighlight
-								onPress={() => {
-									this.setModalVisible(!this.state.modalVisible);
-									this.setState(state => {
-										const newTime = this.state.count - this.timeElapsed;
-
-										return {
-											count: newTime > 0 ? newTime : 0,
-											timeElapsed: newTime > 0 ? this.timeElapsed : 0
-										};
-									});
-								}}>
-								<Ionicons name="x" size={45} color={MAIN_WHITE} />
-							</TouchableHighlight>
-						</View>
-					</Modal>
-				</View> */}
 			</View>
 		);
 	}
@@ -212,7 +115,7 @@ const styles = StyleSheet.create({
 		backgroundColor: MAIN_COLOR,
 		alignItems: 'center',
 		justifyContent: 'center',
-		width: width,
+		width: WIDTH,
 		paddingTop: 30
 	},
 	start: {

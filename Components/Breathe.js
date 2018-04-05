@@ -24,8 +24,8 @@ import { Analytics, Event } from 'expo-analytics';
 
 const analytics = new Analytics('UA-116377550-1');
 
-var width = Dimensions.get('window').width;
-var height = Dimensions.get('window').height;
+
+const MAIN_COLOR = '#9dc6d1'
 
 Animatable.initializeRegistryWithDefinitions({
 	feel: {
@@ -91,22 +91,22 @@ export default class Breathe extends Component {
 			<View style={styles.container}>
 				<Animatable.Text
 					style={styles.textBreathe}
-					animation="breatheText"
+					animation='breatheText'
 					iterationCount={'infinite'}
-					direction="alternate"
+					direction='alternate'
 					duration={parseInt(this.state.rate)}>
 					Breathe Deeply
 				</Animatable.Text>
 
 				<Animatable.Text
-					animation="breathe"
+					animation='breathe'
 					iterationCount={'infinite'}
-					direction="alternate"
+					direction='alternate'
 					duration={parseInt(this.state.rate)}>
 					<Ionicons
-						name="circle"
+						name='circle'
 						size={250}
-						color="rgba(255, 255, 255, 0.63)"
+						color='rgba(255, 255, 255, 0.63)'
 					/>
 				</Animatable.Text>
 
@@ -123,7 +123,7 @@ export default class Breathe extends Component {
 				<Text style={styles.text}>Adjust Rate</Text>
 
 				<TouchableHighlight
-					underlayColor="rgba(0,0,0, 0)"
+					underlayColor='rgba(0,0,0, 0)'
 					onPress={() => {
 						this.refs.picker.show();
 					}}>
@@ -140,7 +140,7 @@ export default class Breathe extends Component {
 					options={options}
 					itemStyle={{
 						fontSize: 55,
-						backgroundColor: '#9dc6d1'
+						backgroundColor: MAIN_COLOR
 					}}
 					onSubmit={option => {
 						this.setState({
@@ -157,7 +157,7 @@ export default class Breathe extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#9dc6d1',
+		backgroundColor: MAIN_COLOR,
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
 		fontSize: 20,
 		padding: 10,
 		fontFamily: 'Avenir-Book',
-		backgroundColor: 'rgba(255, 255, 255, 0.1)',
+		backgroundColor: 'rgba(255, 255, 255, 0)',
 		borderWidth: 1,
 		borderRadius: 25,
 		borderColor: 'rgba(255, 255, 255, 0.8)',

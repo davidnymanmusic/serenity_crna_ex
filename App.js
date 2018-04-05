@@ -2,8 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 //COMPONENTS
-import TabNavigator from '/Users/davidnyman/capstone/development/create_ex_try/serenity_crna_ex/Components/TabBar.js';
+import TabNavigator from './Components/TabBar.js';
 import Welcome from './Components/Welcome';
+
+console.disableYellowBox = true;
+
 
 export default class App extends React.Component {
 	constructor(props) {

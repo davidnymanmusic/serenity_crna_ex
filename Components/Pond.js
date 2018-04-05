@@ -22,6 +22,9 @@ const analytics = new Analytics('UA-116377550-1');
 
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
+
+const MAIN_COLOR = '#9dc6d1';
+
 export default class Pond extends Component {
 	constructor(props) {
 		super(props);
@@ -44,8 +47,6 @@ export default class Pond extends Component {
 					rippleDuration={3000}>
 					<TouchableHighlight style={styles.button} buttonPress={this.touched()}>
 						<Animatable.Text
-							// animation='fadeOut'
-							// duration={10000}
 							style={styles.text}>
 							Touch
 						</Animatable.Text>
@@ -59,7 +60,7 @@ export default class Pond extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#9dc6d1',
+		backgroundColor: MAIN_COLOR,
 		alignItems: 'center',
 		justifyContent: 'center'
 	},

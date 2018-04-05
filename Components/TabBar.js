@@ -55,7 +55,7 @@ class MyNotificationsScreen extends React.Component {
 	static navigationOptions = {
 		drawerLabel: 'Activities',
 		drawerIcon: ({ tintColor }) => (
-			<Ionicons name="circle" size={20} color="#9dc6d1" />
+			<Ionicons name='circle' size={20} color='#9dc6d1' />
 		)
 	};
 
@@ -64,7 +64,7 @@ class MyNotificationsScreen extends React.Component {
 			<View style={styles.container}>
 				<Button
 					onPress={() => this.props.navigation.goBack()}
-					title="Go back home"
+					title='Go back home'
 				/>
 			</View>
 		);

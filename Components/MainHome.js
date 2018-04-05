@@ -1,30 +1,14 @@
 import React, { Component } from 'react';
-import {
-	Text,
-	View,
-	StyleSheet,
-	Button,
-	Image,
-	Dimensions
-} from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 import { TabNavigator, TabBarBottom, DrawerNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Feather';
 
-
-
 import Breathe from './Breathe';
 
-var width = Dimensions.get('window').width; //full width
-var height = Dimensions.get('window').height; //full height
+const MAIN_COLOR = '#9dc6d1';
 
 export default class Main extends Component {
-	static navigationOptions = {
-		drawerLabel: 'Main',
-		drawerIcon: ({ tintColor }) => (
-			<Ionicons name="circle" size={20} color="#9dc6d1" />
-		)
-	};
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -41,7 +25,7 @@ export default class Main extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#9dc6d1',
+		backgroundColor: MAIN_COLOR,
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
