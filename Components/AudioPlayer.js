@@ -184,7 +184,7 @@ export default class AudioPlayer extends Component {
 	}
 	selectTrack() {
 		analytics
-			.event(new Event('track', String(this.state.playbackInstanceName)))
+			.event(new Event('Track', String(this.state.playbackInstanceName)))
 			.then(() => console.log(String(this.state.playbackInstanceName)))
 			.catch(e => console.log(e.message));
 	}

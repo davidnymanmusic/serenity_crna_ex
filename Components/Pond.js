@@ -16,7 +16,7 @@ import * as Animatable from 'react-native-animatable';
 import Ripple from 'react-native-material-ripple';
 
 
-import { Analytics, PageHit } from 'expo-analytics';
+import { Analytics, Event } from 'expo-analytics';
 const analytics = new Analytics('UA-116377550-1');
 
 
@@ -33,9 +33,12 @@ export default class Pond extends Component {
 	}
 	touched(){
 		analytics
-			.hit(new PageHit('Pond', 'touched'))
+			.hit(new Event('Pond', 'Page'))
 			.then(() => console.log('Pond'))
 			.catch(e => console.log(e.message));
+	}
+	componentDidMount(){
+		this.touched()
 	}
 	render() {
 		return (
