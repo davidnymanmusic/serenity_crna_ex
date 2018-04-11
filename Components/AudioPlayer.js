@@ -48,6 +48,16 @@ class PlaylistItem {
 }
 const PLAYLIST = [
 	new PlaylistItem(
+		'Progress',
+		'https://s3.amazonaws.com/davidnymancapstone/Serenity_Now_1.mp3',
+		false
+	),
+	new PlaylistItem(
+		'Alternate',
+		'https://s3.amazonaws.com/davidnymancapstone/Serenity_Now_2.mp3',
+		false
+	),
+	new PlaylistItem(
 		'Invisible',
 		'https://s3.amazonaws.com/davidnymancapstone/Invisibilia.mp3',
 		false

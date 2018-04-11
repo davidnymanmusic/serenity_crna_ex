@@ -41,8 +41,8 @@ Animatable.initializeRegistryWithDefinitions({
 	}
 });
 
-const labels = ['😀', '😊', '🙂', '😕', '😔', '😩', '😢', '🙃'];
-const options = ['grinning 😀', 'smiling 😊', 'slight smile 🙂', 'confused 😕', 'sad 😔', 'weary 😩', 'crying 😢', 'upside down 🙃'];
+const options = ['😀', '😊', '🙂', '😕', '😔', '😩', '😢', '🙃'];
+// const labels = ['grinning 😀', 'smiling 😊', 'slight smile 🙂', 'confused 😕', 'sad 😔', 'weary 😩', 'crying 😢', 'upside down 🙃'];
 
 export default class Breathe extends Component {
 	constructor(props) {
@@ -140,7 +140,6 @@ export default class Breathe extends Component {
 				<SimplePicker
 					ref={'picker'}
 					options={options}
-					labels={labels}
 					itemStyle={{
 						fontSize: 55,
 						backgroundColor: MAIN_COLOR
